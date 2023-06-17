@@ -1,0 +1,29 @@
+.buttonAlgo{
+  border-radius: 15px !important;
+  width: 70px;
+}
+
+#timeQuantum{
+width: 80px;
+}
+
+.btn-primary {
+  background-color: red;
+  border-color: red;
+}
+
+.col-3 border border-primary p-3 mb-2{
+
+  background-color: red;
+  border-color: red;
+}
+
+.btn btn-primary {
+  background-color: red;
+  border-color: red;
+}
+
+.form-group{
+  background-color: rgb(157, 33, 33);
+  border-color: red;
+}

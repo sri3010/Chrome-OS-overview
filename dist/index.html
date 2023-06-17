@@ -1,0 +1,226 @@
+<html lang="en">
+<head>
+    <style>
+        section {
+        height: 50vh; /* Make each section occupy the full viewport height */
+        display: flex;
+        flex-direction: column; /* Display content from top to bottom */
+        justify-content: center;
+        align-items: center;
+}
+
+        img {
+            margin-bottom: 20px;
+        }
+        .button {
+            display: flex;
+          }
+
+          .box {
+            width: 35px;
+            height: 40px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 15px;
+            font-weight: 700;
+            color: #fff;
+            transition: all .8s;
+            cursor: pointer;
+            position: relative;
+            background: rgb(12, 12, 12);
+            overflow: hidden;
+          }
+
+          .box:before {
+            content: " ";
+            position: absolute;
+            top: 0;
+            background: #fc0000;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transform: translateY(100%);
+            transition: transform .4s;
+          }
+
+          .box:nth-child(2)::before {
+            transform: translateY(-100%);
+            content: ' ';
+          }
+
+          .box:nth-child(3)::before {
+            content: ' O';
+          }
+
+          .box:nth-child(4)::before {
+            transform: translateY(-100%);
+            content: 'S';
+          }
+
+          .box:nth-child(5)::before {
+            content: '';
+          }
+
+          .button:hover .box:before {
+            transform: translateY(0);
+          }
+    </style>
+    <div class="button">
+        <a href="./navee.html">
+        <div class="box">C</div></a>
+        <div class="box">H</div>
+        <div class="box">R</div>
+        <div class="box">O</div>
+        <div class="box">M</div>
+        <div class="box">E</div>
+    </div>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"></script>
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700&amp;display=swap' rel='stylesheet' type='text/css'>
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+    <script src="app.js" type="text/javascript"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <link rel="stylesheet" href="new.css">
+    <script src="new.js" type="text/javascript"></script>
+    <title>SchAl</title>
+    <style>
+        /* width */
+        ::-webkit-scrollbar {
+          width: 12px;
+        }
+
+        /* Track */
+        ::-webkit-scrollbar-track {
+          box-shadow: inset 0 0 5px grey;
+          border-radius: 12px;
+        }
+
+        /* Handle */
+        ::-webkit-scrollbar-thumb {
+          background: #b30000;
+          border-radius: 10px;
+        }
+
+        /* Handle on hover */
+        ::-webkit-scrollbar-thumb:hover {
+          background: #b30000;
+        }
+        </style>
+</head>
+<body>
+<section>
+    <h1>Chrome OS</h1>
+  <div id="inner">
+        <div class="row mb-5 pt-3" id="main">
+            <div class="col-9 process-list-container">
+                <table class="table table-bordered" id="tblProcessList">
+                    <thead>
+                        <tr>
+
+                            <th scope="col"  style="border-color: red; color: white;" >Process ID</th>
+                            <th scope="col"  style="border-color: red; color: white;" >Arrival Time</th>
+                            <th scope="col"  style="border-color: red; color: white;" >Burst Time</th>
+                        </tr>
+                    </thead>
+                    <tbody style="border-color: red; color: white;">
+
+                    </tbody>
+                </table>
+                <div class="row">
+                    <div class="col">
+                        <input class="form-control mb-2" type="number"min="0" id="processID" placeholder="Process ID" required>
+                    </div>
+                    <div class="col">
+                        <input class="form-control mb-2" type="number" min="0" id="arrivalTime" placeholder="Arrival Time">
+                    </div>
+                    <div class="col">
+                        <input class="form-control mb-2" type="number" min="0" id="burstTime" placeholder="Burst Time">
+                    </div>
+                    <div class="col">
+                        <button class="btn btn-primary" id="btnAddProcess" style="font-weight: 700; color:rgb(157, 33, 33)">Add Process</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-3 border border-primary p-3 mb-2">
+                <div class="form">
+                    <div class="form-group">
+                        <label for="algorithmSelector">Select Scheduling Method</label>
+                        <select class="form-control" id="algorithmSelector">
+                            <option value=>..</option>
+                            <option value="optCFS">Completely fair Scheduling </option>
+                            <option value="optSJF">Shortest Job First</option>
+                            <option value="optSRTF">Shortest Remaining Time First</option>
+                            <option value="optRR">Round Robin</option>
+                        </select>
+                    </div>
+                    <div class="form-group form-group-time-quantum">
+                        <label class="mt-1  ">Time Quantum :</label>
+                        <input class="form-control mb-2" type="number" min="0" max="20" id="timeQuantum" title="Enter the time quantum here" placeholder="Time Quantum">
+                    </div>
+                    <div class="form-group">
+                        <label for="avgTurnaroundTime">Average Turnaround Time</label>
+                        <input class="form-control" id="avgTurnaroundTime" type="number" placeholder="0" disabled>
+                    </div>
+                    <div class="form-group">
+                        <label for="avgTurnaroundTime">Average Waiting Time</label>
+                        <input class="form-control" id="avgWaitingTime" type="number" placeholder="0" disabled>
+                    </div>
+                    <div class="form-group">
+                        <label for="avgTurnaroundTime">Throughput</label>
+                        <input class="form-control" id="throughput" type="number" placeholder="0" disabled>
+                    </div>
+                    <div class="form-group">
+                        <button class="btn btn-primary"  id="btnCalculate" style="font-weight: 700; color: rgb(157, 33, 33);"> Calculate</button>
+                    </div>
+                    <script>
+                        function resetForm() {
+                          document.getElementById("tblProcessList").innerHTML = "";
+                          document.getElementById("algorithmSelector").selectedIndex = 0;
+                          document.getElementById("timeQuantum").value = "";
+                          document.getElementById("avgTurnaroundTime").value = "";
+                          document.getElementById("avgWaitingTime").value = "";
+                          document.getElementById("throughput").value = "";
+                          document.getElementById("tblResults").innerHTML = "";
+                          location.reload();
+                        }
+                      </script>
+
+                      <div id="reset">
+                        <button onclick="resetForm()" style="display: flexbox;">Reset</button>
+                      </div>
+
+                </div>
+            </div>
+            <table class="table table-bordered" id="tblResults">
+                <thead>
+                    <tr>
+                        <th scope="col" style="border-color: red; color: white;">Process ID</th>
+                        <th scope="col" style="border-color: red; color: white;">Arrival Time</th>
+                        <th scope="col" style="border-color: red; color: white;">Burst Time</th>
+                        <th scope="col" style="border-color: red; color: white;">Completion Time</th>
+                        <th scope="col" style="border-color: red; color: white;">Waiting Time</th>
+                        <th scope="col" style="border-color: red; color: white;">Turnaround Time</th>
+
+                    </tr>
+                </the  ad>
+                <tbody style=" border-color: red; color: white;">
+
+                </tbody>
+            </table>
+        </div>
+    <div class="right">
+    </div>
+  </div>
+</section>
+
+</body>
+</html>

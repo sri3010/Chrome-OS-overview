@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Chrome OS Installation Guide</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <style>
+        section {
+            margin-bottom: 30px;
+        }
+
+        img {
+            margin-bottom: 20px;
+        }
+        .button {
+            display: flex;
+          }
+
+          .box {
+            width: 35px;
+            height: 40px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 15px;
+            font-weight: 700;
+            color: #fff;
+            transition: all .8s;
+            cursor: pointer;
+            position: relative;
+            background: rgb(12, 12, 12);
+            overflow: hidden;
+          }
+
+          .box:before {
+            content: " ";
+            position: absolute;
+            top: 0;
+            background: #fc0000;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transform: translateY(100%);
+            transition: transform .4s;
+          }
+
+          .box:nth-child(2)::before {
+            transform: translateY(-100%);
+            content: ' ';
+          }
+
+          .box:nth-child(3)::before {
+            content: ' O';
+          }
+
+          .box:nth-child(4)::before {
+            transform: translateY(-100%);
+            content: 'S';
+          }
+
+          .box:nth-child(5)::before {
+            content: '';
+          }
+
+          .button:hover .box:before {
+            transform: translateY(0);
+          }
+    </style>
+</head>
+<body>
+    <div class="button">
+        <a href="../navee.html">
+        <div class="box">C</div></a>
+        <div class="box">H</div>
+        <div class="box">R</div>
+        <div class="box">O</div>
+        <div class="box">M</div>
+        <div class="box">E</div>
+
+    </div>
+    <header>
+        <h1>Chrome OS Installation Guide</h1>
+    </header>
+    <main>
+        <section class="hidden">
+            <h2>What Is Chrome OS Flex?</h2>
+            <p>The Establishment of Chrome OS had begun from Neverware, the company that developed CloudReady. The OS was seen as a life saver which allowed users to breathe new life into old PC's.</p>
+            <p>Google took over the project in February 2022 and released the first beta build of Chrome OS Flex (aka CloudReady 2.0) based on Chrome OS.</p>
+
+            <p>Google is offering Chrome OS Flex to Education and Enterprise users for free. But regular users can also install Chrome OS Flex on their older Windows PCs and MacBooks. The aim behind this project is to utilize old hardware and offer speedy performance, almost on par with modern computers. As Google is now maintaining the project for hundreds of devices, we expect greater support from a myriad of different manufacturers, including HP, Apple, Asus, and more.</p>
+        </section>
+        <img src=".\a-3.webp" alt="Chrome OS Download" width="600" height="300" class="center">
+        <section class="hidden">
+            <h2><b>Requirements to Install Chrome OS Flex</b></h2>
+            <p>1. A USB pen drive with at least 8GB or more storage.</p>
+            <p>2. Windows PC with an Intel or AMD x86-64-bit processor. ARM processors are not supported yet.</p>
+            <p>3. At least 4GB RAM or more.</p>
+            <p>4. Internal storage must be 16GB or more.</p>
+            <p>5. Check if your computer is certified to run Chrome OS Flex <a href="https://support.google.com/chromeosflex/answer/11513094" target="_blank"><span>here</span></a>. If your PC is on the list, you are good to go. In case your model does not appear in the list, do not worry. You can still proceed with the installation. Chrome OS Flex works even on non-certified PCs as we’ve tested below, it’s just that some of the functionalities might be limited. Over time, Google will add more computers to its certified list.</p>
+        </section>
+        <section class="hidden">
+            <h2><b>Installing Chrome OS Flex On a USB Drive</b></h2>
+            <p>1. First, go ahead and install the Chromebook Recovery Utility Chrome extension using the link <a href="https://chrome.google.com/webstore/detail/chromebook-recovery-utili/pocpnlppkickgojjlmhdmidojbmbodfm?hl=en" target="_blank"><span> here </span></a>. It’s an extension that will allow you to flash the Chrome OS Flex build on your USB drive.</p>
+            <p>2. Next, open the Chromebook Recovery Utility and plug in your USB drive. After that, click on “Get Started“. </p>
+            <p>3. On the next page, click the “Select a model from a list” option.</p>
+            <p>4. Click on the “Select a manufacturer” drop-down menu and choose “Google Chrome OS Flex“. From the next drop-down menu, select “Chrome OS Flex”. Now, click on “Continue”.</p>
+            <p>5. After that, select your USB thumb drive and click on “Continue“</p>
+            <p>6. Finally, click on “Create now“, and the Chromebook Recovery Utility will create a bootable Chrome OS Flex drive. The whole process will take anywhere from 10 to 15 minutes, depending on your internet speed.</p>
+        </section>
+        <section class="hidden">
+            <h2><b>Install Chrome OS Flex on a Windows Laptop or MacBook</b></h2>
+            <p>1. Once the flashing process is complete, restart your PC and press the boot key. If you don’t know the boot key for your computer, check the table below. Keep pressing the boot key until you see the boot selection page. If you are installing Chrome OS Flex on a custom-built PC, find the boot key based on your motherboard manufacturer from the internet.</p>
+            <img src=".\b-2.webp" alt="Chrome OS Download" width="600" height="300">
+            <p>2. On the boot selection page, select your USB drive using the arrow keys and hit Enter.</p>
+            <p>3. Now, the “Welcome to CloudReady 2.0” screen will appear. Here, click on “Get Started“. Now, go through the on-screen instructions and sign in with your Google account.</p>
+            <img src=".\IMG_20220217_132548.webp"  alt="welcome" height="500" width="500">
+            <p>4. I suggest you first explore Chrome OS Flex before installing it on your hard drive. This way, you can check the compatibility of your Wi-Fi, keyboard, mouse, Bluetooth, touchpad, and other hardware devices.</p>
+            <img src=".\IMG_20220217_132611.webp" alt="cloud ready" width="600" height="500">
+            <p>5. Once you are sure you want to install Chrome OS Flex, open the Quick Settings panel from the bottom-right corner and click “Sign out“.</p>
+            <p>6. Next, click on “Install CloudReady” at the bottom-left corner.</p>
+            <p>7. Finally, click on “Install CloudReady 2.0” and then click on “Install” again. Note that this step will wipe your complete hard drive, so make sure to take a backup before performing this action. Once the installation is complete, shut down your computer and remove the USB drive.</p>
+            <img src=".\IMG_20220217_115033.webp" alt="cloud ready" width="600" height="500">
+            <p>8. And that's it. Chrome OS Flex will boot up on your device without any issues. You can now enable the new Chrome OS launcher on Chrome OS Flex and do a lot more.</p>
+            <img src=".\dorjtty7oao11.webp" alt="homepg" width="600" height="300">
+        </section>
+
+        <section class="hidden">
+            <h2>Conclusion</h2>
+            <p>Congratulations! You have successfully installed Chrome OS on your device. Enjoy the Chrome OS experience!</p>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2023 Chrome OS Installation Guide. All rights reserved.</p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>

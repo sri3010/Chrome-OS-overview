@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Process Synchronization</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <style>
+        section {
+        height: 50vh; /* Make each section occupy the full viewport height */
+        display: flex;
+        flex-direction: column; /* Display content from top to bottom */
+        justify-content: center;
+        align-items: center;
+}
+
+        img {
+            margin-bottom: 20px;
+        }
+        .button {
+            display: flex;
+          }
+
+          .box {
+            width: 35px;
+            height: 40px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 15px;
+            font-weight: 700;
+            color: #fff;
+            transition: all .8s;
+            cursor: pointer;
+            position: relative;
+            background: rgb(12, 12, 12);
+            overflow: hidden;
+          }
+
+          .box:before {
+            content: " ";
+            position: absolute;
+            top: 0;
+            background: #fc0000;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transform: translateY(100%);
+            transition: transform .4s;
+          }
+
+          .box:nth-child(2)::before {
+            transform: translateY(-100%);
+            content: ' ';
+          }
+
+          .box:nth-child(3)::before {
+            content: ' O';
+          }
+
+          .box:nth-child(4)::before {
+            transform: translateY(-100%);
+            content: 'S';
+          }
+
+          .box:nth-child(5)::before {
+            content: '';
+          }
+
+          .button:hover .box:before {
+            transform: translateY(0);
+          }
+    </style>
+</head>
+<body>
+    <div class="button">
+        <a href="../navee.html">
+        <div class="box">C</div></a>
+        <div class="box">H</div>
+        <div class="box">R</div>
+        <div class="box">O</div>
+        <div class="box">M</div>
+        <div class="box">E</div>
+    </div>
+    <header>
+        <h1>Process synchronization</h1>
+        <H2>Synchronization of Dancers</H2>
+    </header>
+    <main>
+        <section class="hidden">
+            <H2>Critical section: </H2>
+            <p>
+                <li>The Critical Section  is the area where all the Action happens, the Podium.</li>
+
+                <li>All the Hard work and practice done by the performers are ignited here.</li>
+
+                <li>This critical section may involve intricate choreography, complex formations or moments of heightened artistic expression.</li>
+
+                <li>Choreography Design, Exclusive Focus and Synchronization of Movements are some important factors to kept perfectly aligned at all times.</li>
+
+
+            </p>
+        </section>
+
+        <section class="hidden">
+            <h2><b>Synchronization of Dancer :</b></h2>
+            <p>1.Considering the synchronization of the Dancers , the concepts of Mutual Exclusion , Progress and Bounded Wait can be applied here to ensure a smooth and harmonious performance.
+            </p>
+            <p>2.Mutual Exclusion : Mutual exclusion is a property of process synchronization which states that “no two processes can exist in the critical section at any given point of time”.
+            </p>
+            <p>3. Progress : Progress means that if one process doesn't need to execute into critical section then it should not stop other processes to get into the critical section.
+            </p>
+            <p>4. Bounded Wait : Bounded waiting means that each process must have a limited waiting time. Itt should not wait endlessly to access the critical section
+            </p>
+
+        </section>
+        <section class="hidden">
+            <h2><b>Mutual Exclusion</b></h2>
+            <p>1. In dance synchronization, mutual exclusion refers to the idea that dancers should perform specific movements or actions exclusively at certain times.
+            </p>
+            <p>2. When a particular set of Dancers are performing a specific choreographed sequence, on the stage, the other set of dancers must wait for them to complete, ie they cannot enter the critical section until the previous group or performer is done.
+            </p>
+            <p>3.This can be ensured by adhering to properly designed choreography and time management for the performers.
+            </p>
+
+        </section>
+        <section class="hidden">
+            <h2><b>Progress</b></h2>
+
+            <p>1. Progress in dance synchronization relates to the continuous flow and development of the performance.
+            </p>
+            <p>2.Dancers should ensure that the performance progresses smoothly from one move or segment to the next, without any interruptions or delays.
+
+            </p>
+            <p>3.Progress is achieved through proper coordination, smooth transitions, and seamless execution of choreographed sequences.
+            </p>
+            <p>4. Proper cues, timing and attention to the smallest details can help the dancers ace their performance.
+            </p>
+        </section>
+        <section class="hidden">
+            <h2><b>Peterson's Solution</b></h2>
+            <p>
+                Assume there are two dancers, Dancer A and Dancer B, who need to synchronize their movements to maintain mutual exclusion during a specific part of the performance.
+Peterson's solution employs the use of flags to indicate the intent of each dancer to enter the critical section. For example, Dancer A sets their flag to indicate their desire to enter, while Dancer B sets their flag to indicate the same intention. Both dancers then proceed to check the value of 'turn' and observe the other dancer's flag.
+           </p>
+        </section>
+    <script src="script.js"></script>
+</body>
+</html>
